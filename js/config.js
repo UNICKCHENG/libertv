@@ -82,37 +82,37 @@ const API_SITES = {
         api: 'https://cj.rycjapi.com',
         name: '如意资源',
     },
-    jkun: {
-        api: 'https://jkunzyapi.com',
-        name: 'jkun资源',
-        adult: true
-    },
-    bwzy: {
-        api: 'https://api.bwzym3u8.com',
-        name: '百万资源',
-        adult: true
-    },
-    souav: {
-        api: 'https://api.souavzy.vip',
-        name: 'souav资源',
-        adult: true
-    },
-    r155: {
-        api: 'https://155api.com',
-        name: '155资源',
-        adult: true
-    },
-    lsb: {
-        api: 'https://apilsbzy1.com',
-        name: 'lsb资源',
-        adult: true
-    },
-    huangcang: {
-        api: 'https://hsckzy.vip',
-        name: '黄色仓库',
-        adult: true,
-        detail: 'https://hsckzy.vip'
-    },
+    // jkun: {
+    //     api: 'https://jkunzyapi.com',
+    //     name: 'jkun资源',
+    //     adult: true
+    // },
+    // bwzy: {
+    //     api: 'https://api.bwzym3u8.com',
+    //     name: '百万资源',
+    //     adult: true
+    // },
+    // souav: {
+    //     api: 'https://api.souavzy.vip',
+    //     name: 'souav资源',
+    //     adult: true
+    // },
+    // r155: {
+    //     api: 'https://155api.com',
+    //     name: '155资源',
+    //     adult: true
+    // },
+    // lsb: {
+    //     api: 'https://apilsbzy1.com',
+    //     name: 'lsb资源',
+    //     adult: true
+    // },
+    // huangcang: {
+    //     api: 'https://hsckzy.vip',
+    //     name: '黄色仓库',
+    //     adult: true,
+    //     detail: 'https://hsckzy.vip'
+    // },
     zuid: {
         api: 'https://api.zuidapi.com',
         name: '最大资源'
@@ -148,7 +148,7 @@ const AGGREGATED_SEARCH_CONFIG = {
 // 抽象API请求配置
 const API_CONFIG = {
     search: {
-    	// 修改搜索接口为返回更多详细数据（包括视频封面、简介和播放列表）
+        // 修改搜索接口为返回更多详细数据（包括视频封面、简介和播放列表）
         path: '/api.php/provide/vod/?ac=videolist&wd=',
         headers: {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
@@ -156,7 +156,7 @@ const API_CONFIG = {
         }
     },
     detail: {
-    	// 修改详情接口也使用videolist接口，但是通过ID查询，减少请求次数
+        // 修改详情接口也使用videolist接口，但是通过ID查询，减少请求次数
         path: '/api.php/provide/vod/?ac=videolist&ids=',
         headers: {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
