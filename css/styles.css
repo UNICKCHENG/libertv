@@ -368,7 +368,8 @@ body {
     border-radius: 8px;
 }
 
-#modalContent button {
+#modalContent button,
+#episodesGrid button {
     background: rgba(138, 180, 248, 0.08);
     border: 1px solid rgba(138, 180, 248, 0.2);
     transition: all 0.2s ease;
@@ -376,7 +377,8 @@ body {
     padding: 8px 16px;
 }
 
-#modalContent button:hover {
+#modalContent button:hover,
+#episodesGrid button:hover {
     background: rgba(138, 180, 248, 0.15);
     border-color: var(--primary-color);
     box-shadow: 0 1px 3px rgba(138, 180, 248, 0.3);

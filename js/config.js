@@ -134,6 +134,14 @@ const API_SITES = {
         api: 'https://api.wujinapi.me',
         name: '无尽资源'
     },
+    wwzy: {
+        api: 'https://wwzy.tv',
+        name: '旺旺短剧'
+    },
+    ikun: {
+        api: 'https://ikunzyapi.com',
+        name: 'iKun资源'
+    },
 };
 
 // 添加聚合搜索的配置选项

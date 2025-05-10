@@ -281,14 +281,19 @@
 
         <!-- 添加自动播放开关和排序按钮 -->
         <div class="player-container">
-            <div class="flex justify-end items-center mb-4 gap-2">
+            <div class="flex justify-end items-center gap-2">
                 <span class="text-gray-400 text-sm">自动连播</span>
                 <label class="switch">
                     <input type="checkbox" id="autoplayToggle">
                     <span class="slider"></span>
                 </label>
+                <button onclick="copyLinks()"
+                    class="px-4 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 text-white text-xs font-semibold rounded-lg transition-all duration-300 transform items-center justify-center flex">
+                    <div class="h-5 w-0"></div>
+                    <span>复制视频链接</span>
+                </button>
                 <button onclick="toggleEpisodeOrder()"
-                    class="ml-4 px-4 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2">
+                    class="px-4 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 text-white text-xs font-semibold rounded-lg transition-all duration-300 transform items-center justify-center flex">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" id="orderIcon" viewBox="0 0 20 20"
                         fill="currentColor">
                         <path fill-rule="evenodd"
@@ -1140,6 +1145,18 @@
             if (currentEpisodeIndex < currentEpisodes.length - 1) {
                 playEpisode(currentEpisodeIndex + 1);
             }
+        }
+
+        // 复制播放链接
+        function copyLinks() {
+            // 尝试从URL中获取参数
+            const urlParams = new URLSearchParams(window.location.search);
+            const linkUrl = urlParams.get('url') || '';
+            navigator.clipboard.writeText(linkUrl).then(() => {
+                showToast('视频链接已复制到剪贴板', 'success');
+            }).catch(err => {
+                showToast('复制失败，请检查浏览器权限', 'error');
+            });
         }
 
         // 切换集数排序
